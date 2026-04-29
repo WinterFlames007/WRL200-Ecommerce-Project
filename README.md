@@ -1,6 +1,11 @@
 # Secure Single Vendor E-Commerce System
 
+<p align="center">
+  <img src="./public/assets/images/logo.png" alt="Easy Shopping Logo" height="120">
+</p>
+
 ## 📌 Project Overview
+
 
 This project is a secure, single-vendor e-commerce web application developed as part of a Work-Based Learning module. The system enables a small retail business to move from manual sales processes to a fully digital platform.
 
