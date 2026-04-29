@@ -126,9 +126,18 @@ The system uses a MySQL database with key tables including:
 
 The database is not automatically created when the project is cloned.
 
-A SQL database structure file is provided separately with the assignment submission. This SQL file contains the empty table structure required for the system to run.
+The empty database structure is included in:
 
-The database should be imported through phpMyAdmin or another MySQL management tool before running the project.
+database/schema.sql
+
+Import this file through phpMyAdmin or MySQL before running the project.
+
+After importing, register at least three users through the website, then manually update user roles in phpMyAdmin:
+
+- change one user to `seller`
+- change one user to `admin`
+
+New registered users are created as `customer` by default.
 
 ---
 
@@ -181,7 +190,9 @@ Create a database, for example:
 
     CREATE DATABASE workrelateddb;
 
-Then import the SQL file provided separately with the assignment submission.
+Then import the schema file located at:
+
+database/schema.sql
 
 The project will not work correctly until the database tables have been imported.
 
