@@ -159,6 +159,12 @@ WHERE email = 'admin@example.com';
 ```
 
 
+
+
+---
+
+## 👤 User Roles
+
 Valid roles are:
 
 customer
@@ -167,11 +173,13 @@ admin
 
 ⚠️ Admin and seller login details are not included in this repository for security and confidentiality reasons.
 
-📂 Example Database Setup
+---
+
+## 📂 Example Database Setup
 
 Create a database, for example:
 
-CREATE DATABASE workrelateddb;
+    CREATE DATABASE workrelateddb;
 
 Then import the SQL file provided separately with the assignment submission.
 
@@ -181,22 +189,33 @@ Some parts of the system also require category records before products can be cr
 
 Example category inserts:
 
-INSERT INTO categories (name, slug) VALUES
-('Clothing', 'clothing'),
-('Hair', 'hair'),
-('Food', 'food'),
-('Accessories', 'accessories');
-⚙️ Setup Instructions
+    INSERT INTO categories (name, slug) VALUES
+    ('Clothing', 'clothing'),
+    ('Hair', 'hair'),
+    ('Food', 'food'),
+    ('Accessories', 'accessories');
+
+---
+
+## ⚙️ Setup Instructions
+
 1. Clone the repository
-git clone https://github.com/WinterFlames007/WRL200-Ecommerce-Project.git
+
+    git clone https://github.com/WinterFlames007/WRL200-Ecommerce-Project.git
+
 2. Go into the project folder
-cd WRL200-Ecommerce-Project
+
+    cd WRL200-Ecommerce-Project
+
 3. Install dependencies
-composer install
+
+    composer install
 
 This recreates the vendor folder using the dependencies listed in composer.json.
 
-🔧 Configuration
+---
+
+## 🔧 Configuration
 
 Create this file:
 
@@ -221,7 +240,9 @@ SMTP email settings
 
 Real API keys, passwords, and private credentials are not included in this GitHub repository for security reasons.
 
-📧 Email Setup
+---
+
+## 📧 Email Setup
 
 The project uses PHPMailer for email features such as password reset.
 
@@ -229,7 +250,9 @@ To use email features, add your own SMTP settings in config/config.php.
 
 If using Gmail SMTP, create a Gmail App Password instead of using a normal Gmail password.
 
-🌐 Running the Project
+---
+
+## 🌐 Running the Project
 
 The application should run from the public folder.
 
@@ -247,7 +270,9 @@ domain_name.xyz/workrelated/public
 
 Replace domain_name.xyz with the actual domain used in the hosting environment.
 
-🧪 Testing
+---
+
+## 🧪 Testing
 
 The system was tested using:
 
@@ -257,11 +282,16 @@ Security testing
 Stripe test mode
 Role-based access testing
 Checkout and order testing
-📊 Development Approach
+
+---
+
+## 📊 Development Approach
 
 This project was developed using Agile methodology, with sprint-based iterations and weekly development logs.
 
-📎 Evidence
+---
+
+## 📎 Evidence
 
 Supporting project evidence includes:
 
@@ -275,7 +305,10 @@ Stripe integration
 GitHub repository
 Deployment evidence
 Testing evidence
-🔐 Confidential Information
+
+---
+
+## 🔐 Confidential Information
 
 For security and confidentiality reasons:
 
@@ -285,8 +318,12 @@ Stripe keys are not included
 Gmail SMTP password is not included
 config/config.php is excluded from GitHub
 The database file is provided separately with the assignment submission
-👨‍💻 Author
+
+---
+
+## 👨‍💻 Author
 
 OGBEIDE PRINCE
 
 Work-Based Learning Project
+
