@@ -1,7 +1,7 @@
 # Secure Single Vendor E-Commerce System
 
 <p align="center">
-  <img src="public/assets/images/logo.png" alt="Easy Shopping Logo" height="120">
+  <img src="./public/assets/images/logo.png" alt="Easy Shopping Logo" height="120">
 </p>
 
 ## 📌 Project Overview
