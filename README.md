@@ -1,3 +1,5 @@
+![Logo](public/assets/images/logo.png)
+
 # Secure Single Vendor E-Commerce System
 
 ## 📌 Project Overview
