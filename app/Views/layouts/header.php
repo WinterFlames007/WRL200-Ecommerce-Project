@@ -95,7 +95,7 @@ if (isset($_SESSION['user']) && $_SESSION['user']['role'] === 'customer') {
                         <a href="/admin/users">Users</a>
                     <?php endif; ?>
 
-                    <a href="/logout" class="nav-cta">Logout</a>
+                    <a href="/logout" class="nav-cta logout-link">Logout</a>
                 <?php else: ?>
                     <a href="/login">Account</a>
 
