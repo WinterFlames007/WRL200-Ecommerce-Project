@@ -1,3 +1,4 @@
+
 <?php if (!empty($_SESSION['flash_error'])): ?>
     <div class="alert alert-error">
         <?= htmlspecialchars($_SESSION['flash_error']) ?>

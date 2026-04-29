@@ -3311,3 +3311,19 @@ table tr:last-child td {
     letter-spacing: 2px;
     margin-bottom: 10px;
 }
+.brand-logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
