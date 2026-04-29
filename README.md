@@ -1,88 +1,127 @@
 # Secure Single Vendor E-Commerce System
 
 ## 📌 Project Overview
-This project is a secure, single-vendor e-commerce web application developed as part of a Work-Based Learning module. The system enables a small retail business to transition from manual sales processes to a fully digital platform.
 
-The application allows customers to browse products, select variants, place orders, and make secure online payments using Stripe. It also provides administrative and seller functionalities for managing inventory, orders, and users.
+This project is a secure, single-vendor e-commerce web application developed as part of a Work-Based Learning module. The system enables a small retail business to move from manual sales processes to a fully digital platform.
+
+The application allows customers to browse products, select variants, place orders, and make secure online payments using Stripe. It also provides seller and admin functionality for managing inventory, orders, users, and business operations.
 
 ---
 
 ## 🚀 Features
 
 ### Customer Features
+
 - User registration and login
 - Browse products by category
-- Variant selection (size, colour)
-- Shopping cart and checkout
+- Product variant selection, including size and colour
+- Shopping cart
+- Checkout
 - Secure Stripe payment
 - Order history
+- Account profile management
+- Change password
 - Contact form
 - Review system
 
 ### Seller Features
-- Product and variant management
-- Inventory tracking (including expiry dates)
+
+- Seller dashboard
+- Product management
+- Product variant management
+- Additional product and variant image uploads
+- Inventory tracking
+- Expiry date tracking for food products
 - Order management
-- Dashboard with business insights
+- CSV order export
+- Business insights dashboard
 
 ### Admin Features
+
+- Admin dashboard
 - User management
 - Role control
-- Account activation/deactivation
+- Account activation and deactivation
+- Platform settings
+- Reports
+- System logs
 
 ---
 
 ## 🔐 Security Features
+
 - Password hashing using PHP `password_hash`
-- Prepared statements to prevent SQL injection
-- Role-based access control
-- Stripe payment tokenisation (no card storage)
-- Webhook verification for payment confirmation
+- Password verification using `password_verify`
+- Prepared statements to help prevent SQL injection
+- Role-based access control for customer, seller, and admin users
+- Stripe payment tokenisation
+- No card details stored locally
+- Webhook handling for Stripe payment confirmation
+- Sensitive files excluded from GitHub using `.gitignore`
 
 ---
 
 ## 🧱 System Architecture
-- PHP (MVC structure)
-- MySQL database
+
+The system uses a simple MVC-style structure:
+
+- `app/Controllers` handles application logic
+- `app/Views` contains page templates
+- `app/Core` contains routing, database, authentication, middleware, and mailer logic
+- `public` contains the front controller, CSS, JavaScript, and images
+- `config` contains local configuration files
+
+Main technologies used:
+
+- PHP
+- MySQL
+- Composer
+- PHPMailer
+- Stripe API
 - CloudPanel hosting environment
-- Stripe API integration
-- PHPMailer (SMTP email system)
 
 ---
 
 ## 💳 Payment Integration
-Stripe is used for secure payment processing. The system uses:
-- Hosted Checkout
-- Webhooks for payment confirmation
-- No storage of card details
+
+Stripe is used for secure online payment processing. The system uses:
+
+- Stripe Hosted Checkout
+- Stripe test mode
+- Webhook confirmation
+- No local card storage
 
 ---
 
 ## 🗃️ Database
-The system uses MySQL with key tables including:
+
+The system uses a MySQL database with key tables including:
+
 - users
 - products
+- product_images
 - product_variants
+- variant_images
 - orders
 - order_items
 - payments
 - stock_movements
 - reviews
 - contact_messages
+- platform_settings
 
----
+⚠️ Important:
 
-## 🧪 Testing
-The system was tested using:
-- Functional testing
-- User acceptance testing
-- Security testing
-- Stripe test mode
+The database is not automatically created when the project is cloned.  
+A database SQL file will be provided separately with the assignment submission so the required tables can be imported before running the system.
+
+The database should be imported through phpMyAdmin or another MySQL management tool.
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/WinterFlames007/WRL200-Ecommerce-Project.git
