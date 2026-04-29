@@ -156,9 +156,7 @@ WHERE email = 'seller@example.com';
 UPDATE users
 SET role = 'admin'
 WHERE email = 'admin@example.com';
-
-
-
+```
 
 
 Valid roles are:
