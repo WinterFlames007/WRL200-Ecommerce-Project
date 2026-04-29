@@ -91,6 +91,14 @@ Stripe is used for secure online payment processing. The system uses:
 - Webhook confirmation
 - No local card storage
 
+To run the payment features, users must create their own Stripe account and add their own Stripe test keys inside `config/config.php`.
+
+Required Stripe values include:
+
+- Stripe publishable key
+- Stripe secret key
+- Stripe webhook secret
+
 ---
 
 ## 🗃️ Database
@@ -98,30 +106,53 @@ Stripe is used for secure online payment processing. The system uses:
 The system uses a MySQL database with key tables including:
 
 - users
+- categories
 - products
 - product_images
 - product_variants
 - variant_images
+- carts
+- cart_items
 - orders
 - order_items
 - payments
 - stock_movements
+- audit_logs
 - reviews
 - contact_messages
 - platform_settings
 
 ⚠️ Important:
 
-The database is not automatically created when the project is cloned.  
-A database SQL file will be provided separately with the assignment submission so the required tables can be imported before running the system.
+The database is not automatically created when the project is cloned.
 
-The database should be imported through phpMyAdmin or another MySQL management tool.
+A SQL database structure file is provided separately with the assignment submission. This SQL file contains the empty table structure required for the system to run.
+
+The database should be imported through phpMyAdmin or another MySQL management tool before running the project.
 
 ---
 
-## ⚙️ Setup Instructions
+## 👤 User Role Setup
 
-### 1. Clone the repository
+After importing the database structure, users can create accounts through the registration page.
 
-```bash
-git clone https://github.com/WinterFlames007/WRL200-Ecommerce-Project.git
+For testing the system, create at least three accounts:
+
+1. Customer account
+2. Seller account
+3. Admin account
+
+By default, newly registered users are created as customers.
+
+To create seller and admin access, update the `role` field manually in the `users` table using phpMyAdmin.
+
+Example:
+
+```sql
+UPDATE users
+SET role = 'seller'
+WHERE email = 'seller@example.com';
+
+UPDATE users
+SET role = 'admin'
+WHERE email = 'admin@example.com';
